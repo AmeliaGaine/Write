@@ -23,7 +23,6 @@
       <nav class="nav" aria-label="Primary navigation">
         <a href="#studio">Studio</a>
         <a href="#features">Features</a>
-        <a href="#workspace">Workspace</a>
         <a href="#pricing">Pricing</a>
         <a class="nav-cta" href="#studio">Draft a hit</a>
       </nav>
@@ -66,8 +65,8 @@
       <section id="studio" class="studio-panel">
         <div class="section-heading">
           <p class="eyebrow">Interactive browser studio</p>
-          <h2>Generate a Bestseller Blueprint Brief</h2>
-          <p>Choose your promise, tropes, magic economy, and reader temperature. The studio assembles a title, reader promise, positioning, trope stack, first five chapter targets, series engine, and launch copy.</p>
+          <h2>Build a commercial cozy LitRPG package</h2>
+          <p>Choose your promise, tropes, magic economy, and reader temperature. The studio assembles a title, hook, series engine, chapter plan, and product page copy.</p>
         </div>
 
         <div class="builder-grid">
@@ -107,49 +106,15 @@
               <input id="warmth" type="range" min="1" max="5" value="4" />
               <span class="range-label">warmer, safer, more wholesome</span>
             </label>
-            <button id="generateBlueprint" class="button primary full" type="submit">Generate fresh Bestseller Blueprint Brief</button>
-            <p id="generateStatus" class="generate-status" aria-live="polite">Ready to generate a fresh brief.</p>
+            <button class="button primary full" type="submit">Generate bestseller blueprint</button>
           </form>
 
           <article class="output-card" aria-live="polite">
             <div class="output-toolbar">
-              <span>Bestseller Blueprint Brief</span>
-              <div class="toolbar-actions">
-                <button id="saveBlueprint" class="mini-button" type="button">Save</button>
-                <button id="copyBlueprint" class="mini-button" type="button">Copy</button>
-                <button id="exportBlueprint" class="mini-button" type="button">Export .md</button>
-                <button id="exportDocBlueprint" class="mini-button" type="button">Export .doc</button>
-              </div>
+              <span>Blueprint</span>
+              <button id="copyBlueprint" class="mini-button" type="button">Copy</button>
             </div>
             <div id="blueprint"></div>
-          </article>
-        </div>
-      </section>
-
-      <section id="workspace" class="workspace-panel">
-        <div class="section-heading">
-          <p class="eyebrow">Saved blueprint workspace</p>
-          <h2>Keep every cozy quest organized for your publishing calendar.</h2>
-          <p>Save promising concepts, reload their exact inputs, rename working titles, delete duds, and export Markdown or Word-compatible .doc briefs for drafting, editors, or collaborators.</p>
-        </div>
-        <div class="workspace-grid">
-          <aside class="library-card">
-            <div class="library-header">
-              <div>
-                <p class="eyebrow">Library</p>
-                <h3>Saved quests</h3>
-              </div>
-              <span id="savedCount" class="count-pill">0</span>
-            </div>
-            <div id="savedBlueprints" class="saved-list" aria-live="polite"></div>
-          </aside>
-          <article class="workspace-card">
-            <h3>What gets saved</h3>
-            <div class="workspace-benefits">
-              <div><strong>Inputs</strong><span>comfort fantasy, progression system, trope stack, and warmth level</span></div>
-              <div><strong>Output</strong><span>title, reader promise, hook, target reader, positioning, chapter targets, series engine, and launch copy</span></div>
-              <div><strong>Metadata</strong><span>created date and editable working title for later series planning</span></div>
-            </div>
           </article>
         </div>
       </section>
