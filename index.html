@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Golden Green Purple Ocean helps authors design commercial cozy LitRPG novels with market-ready hooks, progression loops, blurbs, and launch plans." />
+    <title>Golden Green Purple Ocean — Cozy LitRPG Bestseller Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Golden Green Purple Ocean home">
+        <span class="brand-mark">GGPO</span>
+        <span>
+          <strong>Golden Green Purple Ocean</strong>
+          <small>Cozy LitRPG Bestseller Studio</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#studio">Studio</a>
+        <a href="#features">Features</a>
+        <a href="#workspace">Workspace</a>
+        <a href="#pricing">Pricing</a>
+        <a class="nav-cta" href="#studio">Draft a hit</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Commercial genre fiction, tuned for comfort reads</p>
+          <h1>Create breakout cozy LitRPG books readers devour like enchanted tea cakes.</h1>
+          <p class="hero-lede">A browser-based SaaS concepting suite for authors who want warm taverns, crunchy progression, found family, low-stress stakes, and a launch-ready book package in minutes.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#studio">Open the studio</a>
+            <a class="button ghost" href="#features">See the system</a>
+          </div>
+          <dl class="proof-strip" aria-label="Product highlights">
+            <div><dt>18</dt><dd>market signals</dd></div>
+            <div><dt>7</dt><dd>cozy progression arcs</dd></div>
+            <div><dt>1-click</dt><dd>sales assets</dd></div>
+          </dl>
+        </div>
+        <aside class="hero-card" aria-label="Example book package">
+          <div class="book-cover">
+            <span class="badge">New Quest</span>
+            <h2>The Cinnamon Mage's Pocket Dungeon</h2>
+            <p>Tea. Tiny slimes. A bakery that levels up.</p>
+          </div>
+          <div class="metric-row">
+            <span>Reader promise</span><strong>Cozy + crunchy</strong>
+          </div>
+          <div class="metric-row">
+            <span>Progression loop</span><strong>Craft → Quest → Upgrade</strong>
+          </div>
+          <div class="metric-row">
+            <span>Launch angle</span><strong>Comfort fantasy for stat lovers</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section id="studio" class="studio-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive browser studio</p>
+          <h2>Generate a Bestseller Blueprint Brief</h2>
+          <p>Choose your promise, tropes, magic economy, and reader temperature. The studio assembles a title, reader promise, positioning, trope stack, first five chapter targets, series engine, and launch copy.</p>
+        </div>
+
+        <div class="builder-grid">
+          <form class="builder-card" id="bookForm">
+            <label>
+              Core comfort fantasy
+              <select id="comfort">
+                <option>magical bakery and enchanted recipes</option>
+                <option>seaside inn for retired adventurers</option>
+                <option>greenhouse guild with talking familiars</option>
+                <option>floating library above a purple ocean</option>
+                <option>cozy crafting shop in a dungeon town</option>
+              </select>
+            </label>
+            <label>
+              Progression fantasy
+              <select id="progression">
+                <option>class evolution</option>
+                <option>skill tree crafting</option>
+                <option>pet/familiar leveling</option>
+                <option>town-building upgrades</option>
+                <option>deck-builder spell cards</option>
+              </select>
+            </label>
+            <label>
+              Commercial trope stack
+              <select id="trope">
+                <option>found family + secret royal regular</option>
+                <option>slow-burn rivals-to-allies + festival deadline</option>
+                <option>chosen-one refusal + adorable monster companion</option>
+                <option>portal reset + second chance business</option>
+                <option>cozy mystery + nonlethal dungeon crawl</option>
+              </select>
+            </label>
+            <label>
+              Reader heat level
+              <input id="warmth" type="range" min="1" max="5" value="4" />
+              <span class="range-label">warmer, safer, more wholesome</span>
+            </label>
+            <button class="button primary full" type="submit">Generate Bestseller Blueprint Brief</button>
+          </form>
+
+          <article class="output-card" aria-live="polite">
+            <div class="output-toolbar">
+              <span>Bestseller Blueprint Brief</span>
+              <div class="toolbar-actions">
+                <button id="saveBlueprint" class="mini-button" type="button">Save</button>
+                <button id="copyBlueprint" class="mini-button" type="button">Copy</button>
+                <button id="exportBlueprint" class="mini-button" type="button">Export .md</button>
+                <button id="exportDocBlueprint" class="mini-button" type="button">Export .doc</button>
+              </div>
+            </div>
+            <div id="blueprint"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="workspace" class="workspace-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Saved blueprint workspace</p>
+          <h2>Keep every cozy quest organized for your publishing calendar.</h2>
+          <p>Save promising concepts, reload their exact inputs, rename working titles, delete duds, and export Markdown or Word-compatible .doc briefs for drafting, editors, or collaborators.</p>
+        </div>
+        <div class="workspace-grid">
+          <aside class="library-card">
+            <div class="library-header">
+              <div>
+                <p class="eyebrow">Library</p>
+                <h3>Saved quests</h3>
+              </div>
+              <span id="savedCount" class="count-pill">0</span>
+            </div>
+            <div id="savedBlueprints" class="saved-list" aria-live="polite"></div>
+          </aside>
+          <article class="workspace-card">
+            <h3>What gets saved</h3>
+            <div class="workspace-benefits">
+              <div><strong>Inputs</strong><span>comfort fantasy, progression system, trope stack, and warmth level</span></div>
+              <div><strong>Output</strong><span>title, reader promise, hook, target reader, positioning, chapter targets, series engine, and launch copy</span></div>
+              <div><strong>Metadata</strong><span>created date and editable working title for later series planning</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="features" class="features section-grid">
+        <div class="section-heading align-left">
+          <p class="eyebrow">Built like a SaaS, loved like a book nook</p>
+          <h2>Everything a cozy progression author needs before chapter one.</h2>
+        </div>
+        <div class="feature-list">
+          <article>
+            <span class="icon">✦</span>
+            <h3>Hook alchemy</h3>
+            <p>Transforms comfort settings into high-concept promises with clear genre keywords, stakes, and emotional payoff.</p>
+          </article>
+          <article>
+            <span class="icon">⬡</span>
+            <h3>Progression economy</h3>
+            <p>Designs satisfying level-ups, skills, recipes, achievements, and town upgrades without breaking cozy tone.</p>
+          </article>
+          <article>
+            <span class="icon">◒</span>
+            <h3>Series engine</h3>
+            <p>Plans repeatable quest loops, sequel escalations, recurring cast friction, and merchandising-friendly motifs.</p>
+          </article>
+          <article>
+            <span class="icon">☾</span>
+            <h3>Launch assets</h3>
+            <p>Drafts blurbs, subtitle formulas, comparison titles, newsletter angles, and ad-friendly one-liners.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow">
+        <div class="section-heading">
+          <p class="eyebrow">The GGPO method</p>
+          <h2>Golden comfort. Green growth. Purple wonder. Ocean depth.</h2>
+        </div>
+        <div class="steps">
+          <div><strong>01</strong><h3>Promise</h3><p>Lock the reader fantasy and coverable hook.</p></div>
+          <div><strong>02</strong><h3>Loop</h3><p>Make every chapter deliver warmth plus measurable progress.</p></div>
+          <div><strong>03</strong><h3>Cast</h3><p>Build lovable helpers, rivals, pets, and regulars.</p></div>
+          <div><strong>04</strong><h3>Launch</h3><p>Package the book for shelves, ads, newsletters, and series read-through.</p></div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="section-heading">
+          <p class="eyebrow">Simple plans</p>
+          <h2>Scale from one comfort quest to a full publishing calendar.</h2>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <h3>Hearth</h3><p class="price">$19<span>/mo</span></p><p>For solo authors validating a single cozy LitRPG concept.</p><ul><li>10 blueprints</li><li>Blurb generator</li><li>Trope checklist</li></ul>
+          </article>
+          <article class="price-card featured-price">
+            <span class="badge">Most magical</span><h3>Guild</h3><p class="price">$49<span>/mo</span></p><p>For series authors planning launches and read-through.</p><ul><li>Unlimited blueprints</li><li>Series bibles</li><li>Launch copy packs</li></ul>
+          </article>
+          <article class="price-card">
+            <h3>Empire</h3><p class="price">$149<span>/mo</span></p><p>For small presses and author teams managing shared worlds.</p><ul><li>Team workspace</li><li>Brand voice presets</li><li>Editorial dashboards</li></ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Golden Green Purple Ocean</strong>
+      <span>Design commercial cozy LitRPG books with heart, systems, and sparkle.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
